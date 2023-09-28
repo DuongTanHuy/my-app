@@ -9,9 +9,12 @@ import { LoadingScreen } from 'src/components/loading-screen';
 
 // ----------------------------------------------------------------------
 
-const IndexPage = lazy(() => import('src/pages/dashboard/one'));
-const PageTwo = lazy(() => import('src/pages/dashboard/two'));
-const PageThree = lazy(() => import('src/pages/dashboard/three'));
+const IndexPage = lazy(() => import('src/pages/dashboard/app'));
+const OverviewEcommercePage = lazy(() => import('src/pages/dashboard/ecommerce'));
+const OverviewAnalyticsPage = lazy(() => import('src/pages/dashboard/analytics'));
+const OverviewBankingPage = lazy(() => import('src/pages/dashboard/banking'));
+const OverviewBookingPage = lazy(() => import('src/pages/dashboard/booking'));
+const OverviewFilePage = lazy(() => import('src/pages/dashboard/file'));
 const PageFour = lazy(() => import('src/pages/dashboard/four'));
 const PageFive = lazy(() => import('src/pages/dashboard/five'));
 const PageSix = lazy(() => import('src/pages/dashboard/six'));
@@ -36,8 +39,11 @@ export const dashboardRoutes = [
     ),
     children: [
       { element: <IndexPage />, index: true },
-      { path: 'two', element: <PageTwo /> },
-      { path: 'three', element: <PageThree /> },
+      { path: 'ecommerce', element: <OverviewEcommercePage /> },
+      { path: 'analytics', element: <OverviewAnalyticsPage /> },
+      { path: 'banking', element: <OverviewBankingPage /> },
+      { path: 'booking', element: <OverviewBookingPage /> },
+      { path: 'file', element: <OverviewFilePage /> },
       {
         path: 'group',
         children: [

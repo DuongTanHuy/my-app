@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 // sections
-import TwoView from 'src/sections/two/view';
+import { OverviewAppView } from 'src/sections/overview/app/view';
 
 // ----------------------------------------------------------------------
 
@@ -8,10 +8,10 @@ export default function Page() {
   return (
     <>
       <Helmet>
-        <title> Dashboard: Two</title>
+        <title> Dashboard: App</title>
       </Helmet>
 
-      <TwoView />
+      <OverviewAppView />
     </>
   );
 }

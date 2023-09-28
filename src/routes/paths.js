@@ -24,13 +24,13 @@ export const paths = {
       profile: `${ROOTS.DASHBOARD}/user/profile`,
       account: `${ROOTS.DASHBOARD}/user/account`,
     },
-    one: `${ROOTS.DASHBOARD}/one`,
-    two: `${ROOTS.DASHBOARD}/two`,
-    three: `${ROOTS.DASHBOARD}/three`,
-    group: {
-      root: `${ROOTS.DASHBOARD}/group`,
-      five: `${ROOTS.DASHBOARD}/group/five`,
-      six: `${ROOTS.DASHBOARD}/group/six`,
+    general: {
+      app: `${ROOTS.DASHBOARD}/app`,
+      ecommerce: `${ROOTS.DASHBOARD}/ecommerce`,
+      analytics: `${ROOTS.DASHBOARD}/analytics`,
+      banking: `${ROOTS.DASHBOARD}/banking`,
+      booking: `${ROOTS.DASHBOARD}/booking`,
+      file: `${ROOTS.DASHBOARD}/file`,
     },
   },
 };

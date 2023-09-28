@@ -1,7 +1,11 @@
 import { useMemo } from 'react';
 // routes
 import { paths } from 'src/routes/paths';
+// locales
+import { useLocales } from 'src/locales';
 // components
+// import Label from 'src/components/label';
+// import Iconify from 'src/components/iconify';
 import SvgColor from 'src/components/svg-color';
 
 // ----------------------------------------------------------------------
@@ -44,42 +48,49 @@ const ICONS = {
 // ----------------------------------------------------------------------
 
 export function useNavData() {
+  const { t } = useLocales();
+
   const data = useMemo(
     () => [
       // OVERVIEW
       // ----------------------------------------------------------------------
       {
-        subheader: 'overview v5.5.0',
+        subheader: t('overview'),
         items: [
-          { title: 'one', path: paths.dashboard.root, icon: ICONS.dashboard },
-          { title: 'two', path: paths.dashboard.two, icon: ICONS.ecommerce },
           {
-            title: 'three',
-            path: paths.dashboard.three,
+            title: t('app'),
+            path: paths.dashboard.root,
+            icon: ICONS.dashboard,
+          },
+          {
+            title: t('e-commerce'),
+            path: paths.dashboard.general.ecommerce,
+            icon: ICONS.ecommerce,
+          },
+          {
+            title: t('analytics'),
+            path: paths.dashboard.general.analytics,
             icon: ICONS.analytics,
           },
-        ],
-      },
-
-      // MANAGEMENT
-      // ----------------------------------------------------------------------
-      {
-        subheader: 'management',
-        items: [
           {
-            title: 'user',
-            path: paths.dashboard.group.root,
-            icon: ICONS.user,
-            children: [
-              { title: 'four', path: paths.dashboard.group.root },
-              { title: 'five', path: paths.dashboard.group.five },
-              { title: 'six', path: paths.dashboard.group.six },
-            ],
+            title: t('banking'),
+            path: paths.dashboard.general.banking,
+            icon: ICONS.banking,
+          },
+          {
+            title: t('booking'),
+            path: paths.dashboard.general.booking,
+            icon: ICONS.booking,
+          },
+          {
+            title: t('file'),
+            path: paths.dashboard.general.file,
+            icon: ICONS.file,
           },
         ],
       },
     ],
-    []
+    [t]
   );
 
   return data;

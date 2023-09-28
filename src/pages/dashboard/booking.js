@@ -1,17 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 // sections
-import ThreeView from 'src/sections/three/view';
+import { OverviewBankingView } from 'src/sections/overview/booking/view';
 
 // ----------------------------------------------------------------------
 
-export default function Page() {
+export default function OverviewBookingPage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard: Three</title>
+        <title> Dashboard: Booking</title>
       </Helmet>
 
-      <ThreeView />
+      <OverviewBankingView />
     </>
   );
 }

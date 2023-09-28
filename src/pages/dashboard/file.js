@@ -1,17 +1,17 @@
 import { Helmet } from 'react-helmet-async';
 // sections
-import OneView from 'src/sections/one/view';
+import { OverviewFileView } from 'src/sections/overview/file/view';
 
 // ----------------------------------------------------------------------
 
-export default function Page() {
+export default function OverviewFilePage() {
   return (
     <>
       <Helmet>
-        <title> Dashboard: One</title>
+        <title> Dashboard: File</title>
       </Helmet>
 
-      <OneView />
+      <OverviewFileView />
     </>
   );
 }
